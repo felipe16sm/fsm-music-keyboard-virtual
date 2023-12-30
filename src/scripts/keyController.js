@@ -11,13 +11,20 @@ class KeyController {
     const headerController = document.createElement("div");
     headerController.classList.add("piano-controller");
 
+    const headerLabel = document.createElement("h1");
+
+    headerLabel.textContent = "Piano Virtual";
+
     this.keyList.containerElement.insertBefore(
       headerController,
       this.keyList.containerElement.firstChild
     );
 
+    headerController.appendChild(headerLabel);
+
     this.headerController = headerController;
   }
+
   createVolumeController() {
     const volumeContainer = document.createElement("div");
 
