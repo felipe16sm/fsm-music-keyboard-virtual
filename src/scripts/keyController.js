@@ -4,6 +4,7 @@ class KeyController {
 
     this.createControllerHeader();
     this.createVolumeController();
+    this.createSlider();
   }
 
   createControllerHeader() {
@@ -43,5 +44,37 @@ class KeyController {
     volumeContainer.appendChild(volumeController);
 
     this.headerController.appendChild(volumeContainer);
+  }
+
+  createSlider() {
+    const sliderContainer = document.createElement("div");
+
+    sliderContainer.classList.add("slider-container");
+
+    const sliderLabel = document.createElement("div");
+
+    sliderLabel.textContent = "Teclas";
+
+    const sliderWrapper = document.createElement("div");
+
+    sliderWrapper.classList.add("slider-wrapper");
+
+    const sliderController = document.createElement("div");
+
+    sliderController.classList.add("slider-controller");
+
+    sliderWrapper.addEventListener("click", () => {
+      sliderController.classList.toggle("active");
+
+      this.keyList.keys.forEach((key) => {
+        key.keyElement.classList.toggle("hide");
+      });
+    });
+
+    sliderWrapper.appendChild(sliderController);
+    sliderContainer.appendChild(sliderLabel);
+    sliderContainer.appendChild(sliderWrapper);
+
+    this.headerController.appendChild(sliderContainer);
   }
 }
