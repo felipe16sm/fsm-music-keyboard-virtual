@@ -1,0 +1,48 @@
+.piano-controller {
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.volume-controller {
+    margin-left: 8px;
+    accent-color: #2f633c;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.slider-wrapper {
+    width: 64px;
+    margin-left: 8px;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: #b2b2b2;
+    cursor: pointer;
+}
+
+.slider-controller {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2f633c;
+    transition: 0.3s;
+}
+
+.slider-controller.active {
+    transform: translateX(28px);
+}
