@@ -1,4 +1,6 @@
 class Key {
+  volume = "1";
+
   constructor({ letter, type }) {
     this.letter = letter?.toLowerCase();
     this.type = type;
@@ -26,6 +28,8 @@ class Key {
   playAudio = () => {
     const audio = new Audio(`src/assets/audios/${this.letter}.wav`);
 
+    audio.volume = this.volume;
+
     audio.play();
 
     this.keyElement.classList.add("active");
@@ -34,4 +38,8 @@ class Key {
       this.keyElement.classList.remove("active");
     }, 150);
   };
+
+  setVolume(volumeValue) {
+    this.volume = volumeValue;
+  }
 }

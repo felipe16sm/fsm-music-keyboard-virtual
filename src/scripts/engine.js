@@ -18,4 +18,10 @@ const keys = [
   new Key({ letter: ";", type: "white" }),
 ];
 
-new KeyList(keys);
+const initialize = () => {
+  const keyList = new KeyList(keys);
+
+  new KeyController(keyList);
+};
+
+initialize();

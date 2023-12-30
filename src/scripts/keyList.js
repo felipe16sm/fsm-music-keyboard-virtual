@@ -56,4 +56,10 @@ class KeyList {
       });
     });
   }
+
+  handleVolume(volumeValue) {
+    this.keys.forEach((key) => {
+      key.volume = volumeValue;
+    });
+  }
 }

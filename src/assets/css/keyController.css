@@ -1,0 +1,17 @@
+.piano-controller {
+    color: #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.volume-container {
+    display: flex;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.volume-controller {
+    margin-left: 8px;
+    accent-color: #2f633c;
+}
